@@ -1,4 +1,4 @@
-package tr.xip.timetable.util
+package com.davidmadethis.remynd.util
 
 import android.content.Context
 import android.view.LayoutInflater

@@ -1,21 +1,20 @@
-package tr.xip.timetable
+package com.davidmadethis.remynd.ui.main
 
 import android.os.Bundle
-import android.support.v7.app.AppCompatActivity
 import com.google.gson.Gson
 import com.google.gson.reflect.TypeToken
 import kotlinx.android.synthetic.main.activity_main.*
 import org.apache.commons.io.IOUtils
-import tr.xip.timetable.model.Class
+import com.davidmadethis.remynd.data.local.dto.Class
+import ng.apk.instantemploy.ui.base.BaseActivity
+import tr.xip.timetable.R
 import java.util.*
 
-class MainActivity : AppCompatActivity() {
+class MainActivity : BaseActivity(),MainContract.View {
+    override var presenter: MainContract.Presenter = MainPresenter(this)
 
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
-        setSupportActionBar(toolbar)
 
+    override fun initView() {
         val timetable = Gson().fromJson<ArrayList<Class>>(
                 IOUtils.toString(assets.open("timetable.json"), "UTF-8"),
                 object : TypeToken<ArrayList<Class>>() {}.type
@@ -29,5 +28,15 @@ class MainActivity : AppCompatActivity() {
             val today = Calendar.getInstance().get(Calendar.DAY_OF_WEEK) - 2
             pager.currentItem = if (today in 0..4) today else 0
         }
+
+     }
+
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        setContentView(R.layout.activity_main)
+        setSupportActionBar(toolbar)
+
+
+        presenter.start()
     }
 }

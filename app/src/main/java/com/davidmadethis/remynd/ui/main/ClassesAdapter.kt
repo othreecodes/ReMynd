@@ -1,12 +1,13 @@
-package tr.xip.timetable
+package com.davidmadethis.remynd.ui.main
 
 import android.support.v7.widget.RecyclerView
 import android.view.View
 import android.view.ViewGroup
 import kotlinx.android.synthetic.main.item_class.view.*
-import tr.xip.timetable.model.Class
-import tr.xip.timetable.util.TimeUtils
-import tr.xip.timetable.util.getLayoutInflater
+import com.davidmadethis.remynd.data.local.dto.Class
+import com.davidmadethis.remynd.util.TimeUtils
+import com.davidmadethis.remynd.util.getLayoutInflater
+import tr.xip.timetable.R
 
 class ClassesAdapter(val day: Int, classes: List<Class>) : RecyclerView.Adapter<ClassesAdapter.ViewHolder>() {
     /**

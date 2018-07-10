@@ -1,9 +1,9 @@
-package tr.xip.timetable
+package com.davidmadethis.remynd.ui.main
 
 import android.support.v4.app.Fragment
 import android.support.v4.app.FragmentManager
 import android.support.v4.app.FragmentStatePagerAdapter
-import tr.xip.timetable.model.Class
+import com.davidmadethis.remynd.data.local.dto.Class
 
 class DaysPagerAdapter(val timetable: ArrayList<Class>, fm: FragmentManager) : FragmentStatePagerAdapter(fm) {
 

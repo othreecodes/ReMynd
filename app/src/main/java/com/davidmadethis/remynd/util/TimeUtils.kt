@@ -1,4 +1,4 @@
-package tr.xip.timetable.util
+package com.davidmadethis.remynd.util
 
 object TimeUtils {
     var times: MutableMap<Int, String> = mutableMapOf(

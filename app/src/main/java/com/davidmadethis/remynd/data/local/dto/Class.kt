@@ -1,4 +1,4 @@
-package tr.xip.timetable.model
+package com.davidmadethis.remynd.data.local.dto
 
 import java.io.Serializable
 
