@@ -3,11 +3,11 @@ package com.davidmadethis.remynd.ui.main
 import android.support.v7.widget.RecyclerView
 import android.view.View
 import android.view.ViewGroup
+import com.davidmadethis.remynd.R
 import kotlinx.android.synthetic.main.item_class.view.*
 import com.davidmadethis.remynd.data.local.dto.Class
 import com.davidmadethis.remynd.util.TimeUtils
 import com.davidmadethis.remynd.util.getLayoutInflater
-import tr.xip.timetable.R
 
 class ClassesAdapter(val day: Int, classes: List<Class>) : RecyclerView.Adapter<ClassesAdapter.ViewHolder>() {
     /**

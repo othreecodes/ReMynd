@@ -6,9 +6,9 @@ import android.support.v7.widget.LinearLayoutManager
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import com.davidmadethis.remynd.R
 import kotlinx.android.synthetic.main.fragment_day.*
 import com.davidmadethis.remynd.data.local.dto.Class
-import tr.xip.timetable.R
 
 class DayFragment : Fragment() {
 
