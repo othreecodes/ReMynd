@@ -15,8 +15,9 @@ class DayFragment : Fragment() {
         return inflater.inflate(R.layout.fragment_day, container, false)
     }
 
+
     @Suppress("UNCHECKED_CAST")
-    override fun onViewCreated(view: View?, savedInstanceState: Bundle?) {
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         val day = arguments?.getInt(ARG_DAY)
         val timetable = arguments?.getSerializable(ARG_TIMETABLE)
 

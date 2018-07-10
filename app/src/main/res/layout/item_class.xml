@@ -4,8 +4,11 @@
     android:layout_width="match_parent"
     android:layout_height="@dimen/class_item_height"
     android:layout_marginBottom="8dp"
+    android:clickable="true"
     android:orientation="horizontal"
-    tools:ignore="UnusedAttribute,SmallSp">
+    android:foreground="?android:attr/selectableItemBackground"
+    tools:ignore="UnusedAttribute,SmallSp"
+    android:focusable="true">
 
     <FrameLayout
         android:layout_width="52dp"
