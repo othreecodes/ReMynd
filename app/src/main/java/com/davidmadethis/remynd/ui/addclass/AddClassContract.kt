@@ -1,14 +1,15 @@
-package com.davidmadethis.remynd.ui.main
+package com.davidmadethis.remynd.ui.addclass
+
 
 import ng.apk.instantemploy.ui.base.BasePresenter
 import ng.apk.instantemploy.ui.base.BaseView
 
 
-interface MainContract {
+interface AddClassContract {
 
     interface View : BaseView<Presenter> {
 
-        fun checkUserAccount()
+
 
     }
 
